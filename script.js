@@ -1,14 +1,11 @@
-$(function(){
-
+$(function () {
+  
    var today = moment();
    $("#currentDay").text(today.format("dddd MMMM Do YYYY, h:mm A"));
-   
-   var currentHour = parseInt(moment().format("H"));
-   
-   // debugger;
 
-   //added if else statements here in an attempt to correct the military time issue I was getting from using a loop for my time
-   for (i = 0; i < 8; i++) {
+   var currentHour = parseInt(moment().format("H"));
+
+   for (i = 0; i < 9; i++) {
       var plannerRow = $("<div>").addClass("row");
       
       if (i <= 3) {
@@ -30,40 +27,38 @@ $(function(){
       plannerRow.append(time, text, save);
       $(".container").append(plannerRow);
 
-   //BSC told me that I was trying to compare two differnt kinds of data on these if/elses.  
-   // trying to correct this by comparing the i itorator to currentHour instead of comparing my time variable.
-   // my time variable has a text result that can't be used to compair with a number.
-   text.each(function(){
-      if (i + 9 < currentHour) {
-         $(this).addClass("past");
-      }
-      else if (i + 9 > currentHour) {
-         $(this).addClass("future");
-      }
-      else if (i + 9 === currentHour)
-         $(this).addClass("present");
-   })
-   
-   
-   
+      text.each(function () {
+         
+         if (i + 9 < currentHour) {
+            $(this).addClass("past");
+         }
+         else if (i + 9 > currentHour) {
+            $(this).addClass("future");
+         }
+         else if (i + 9 === currentHour)
+            $(this).addClass("present");
+      })
+   }
+
    $("button").on("click", saveNote);
-   function saveNote(){
+   function saveNote() {
       var textInput = $(this).siblings("textarea").val();
       var textHistory = JSON.parse(localStorage.getItem("text")) || [];
       textHistory.push(textInput);
-   localStorage.setItem("text", JSON.stringify(textHistory));
+      localStorage.setItem("text", JSON.stringify(textHistory));
    }
-   
-   for (let i = 0; i < localStorage.length; i++){
+
+   for (let i = 0; i < localStorage.length; i++) {
       var retrieveData = localStorage.getItem("text");
       var schedules = JSON.parse(retrieveData);
-   
-   
-      for (let i=0; i < schedules.length; i++);
-      textArea.val = schedules.join("");
+
+      for (let j = 0; j < schedules.length; j++) {
+        
+         var element = [];
+         element.push(schedules);
+         var area = [];
+         area = "#textArea_" + j;
+         $(area).html(JSON.parse(retrieveData));
+      }
    }
-   
-}
-   
-   })
-    
+})
