@@ -13,7 +13,7 @@ The webpage is a Day scheduler set up in blocks of 9 hours.  The curent date is 
 <br>
 <br>
 <br>
-Text can be entered in each hour block.  This is where you can right your things to-do for that hour
+Text can be entered in each hour block.  This is where you can write your things to-do for that hour
 <br>
 <img src="images\text.PNG" height = "150px" width = "600px">
 <br>
