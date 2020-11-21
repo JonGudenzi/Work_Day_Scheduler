@@ -5,39 +5,29 @@
 
 [Click here to view the github repo](https://jongudenzi.github.io/Work_Day_Scheduler/)
 
-The webpage is a Day planner set up 
+The webpage is a Day scheduler set up in blocks of 9 hours.  The curent date is shown at the top of the page.
+<br>
+<img src="images\layout.PNG" height = "450px" width = "450px">
+<img src="images\hours.PNG" height = "500px" width = "150px">
+<img src="images\date.PNG" height = "150px" width = "600px">
+<br>
+<br>
+<br>
+Text can be entered in each hour block.  This is where you can right your things to-do for that hour
+<br>
+<img src="images\text.PNG" height = "150px" width = "600px">
+<br>
+<br>
+<br>
+You can then click the save button to save this information even if the page is refreshed.
+<br>
+<img src="images\save.PNG" height = "150px" width = "150px">
+<br>
+<br>
+<br>
+When the hour has past the text area will turn a different color along with present and future hours.  This will help desipher what hour you need to focus on.
 
-The criteria is presented to the user by a set of prompts and confirms asking them what they would like their password to consist of.
 
-The options the user has to choose from are listed:
-  - How many characters the password contains  (Between 8-128)
-  - Should the password include special characters
-  - Should the password include numbers
-  - Should the password include lowercase letters
-  - Should the password include uppercase letters
 
-  These questions will apear when the user clicks the generate password button.
-  <br>
-  <br>
-  <img src="images\button.PNG" height = "150px" width = "450px">
-<br>
-<br>
-<br>
-Once this occurs the questions are presented in pop-ups as such:
-<br>
-<br>
-<img src="images\howMany.PNG" height = "150px" width = "450px">
-<img src="images\characters.PNG" height = "150px" width = "450px">
-<br>
-<img src="images\lower.PNG" height = "150px" width = "450px">
-<img src="images\upper.PNG" height = "150px" width = "450px">
-<br>
-<img src="images\numbers.PNG" height = "150px" width = "450px">
-<br>
-<br>
-<br>
-The password will generate after the last question has been completed and will be based on 
-the users confirmed options.
-<br>
-<br>
-<img src="images\result.PNG" height = "150px" width = "450px">
+
+
