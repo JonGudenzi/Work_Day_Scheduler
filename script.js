@@ -1,10 +1,11 @@
 $(function () {
-  
+//   currrent time 
    var today = moment();
    $("#currentDay").text(today.format("dddd MMMM Do YYYY, h:mm A"));
 
    var currentHour = parseInt(moment().format("H"));
 
+   // loop for time slots and jquery to create html elements
    for (i = 0; i < 9; i++) {
       var plannerRow = $("<div>").addClass("row");
       
@@ -27,6 +28,7 @@ $(function () {
       plannerRow.append(time, text, save);
       $(".container").append(plannerRow);
 
+      // if statments to determine color blocks for each time compared to current time
       text.each(function () {
          
          if (i + 9 < currentHour) {
@@ -39,7 +41,7 @@ $(function () {
             $(this).addClass("present");
       })
    }
-
+// process to save the user imput to local storage
    $("button").on("click", saveNote);
    function saveNote() {
       var textInput = $(this).siblings("textarea").val();
